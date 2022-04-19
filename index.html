@@ -14,6 +14,21 @@
     <button class="button" id="forward"></button>
     <button class="button" id="play"></button>
     <button class="button" id="pause"></button>
-    <video controls autoplay muted src="./assets/videos/lofi.mp4" width="500"></video>
+    <video id="video" poster="./assets/images/poster.jpg" controls muted src="./assets/videos/lofi.mp4" width="500"></video>
+
+    <script>
+        const $video =  document.querySelector('#video');
+        const $play = document.querySelector('#play');
+        const $pause = document.querySelector('#pause');
+
+        if ($play) {
+            $play.addEventListener('click', handlePlay);
+        }
+
+        function handlePlay() {
+            console.log('Le diste click al boton de Play');
+        }
+        
+    </script>
 </body>
 </html>
